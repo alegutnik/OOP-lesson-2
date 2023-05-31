@@ -1,4 +1,4 @@
-package Task_3;
+package Task_4;
 
 public class Car {
     private int year;
@@ -13,19 +13,24 @@ public class Car {
         this.color = color;
     }
 
-    public Car(int year, double speed, int weight) {
-        this.year = year;
-        this.speed = speed;
-        this.weight = weight;
-    }
-
-    public Car(int year, double speed) {
-        this.year = year;
-        this.speed = speed;
+    public Car() {
+        this(2009, 107.99, 600, "Чорний");
     }
 
     public Car(int year) {
-        this.year = year;
+        this(year, 100, 800, "Білий");
+    }
+
+    public Car(double speed) {
+        this(2007, speed, 800, "Білий");
+    }
+
+    public Car(int year, double speed) {
+        this(year, speed, 800, "Білий");
+    }
+
+    public Car(int year, double speed, String color) {
+        this(year, speed, 800, color);
     }
 
     @Override
